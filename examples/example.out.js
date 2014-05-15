@@ -50,7 +50,7 @@ var ItemList = React.createClass({displayName: 'ItemList',
   }
 });
 
-React.renderComponent(ItemList( {offset:100} ), document.getElementById('container'));
+React.renderComponent(ItemList( {offset:100, initialPage:0} ), document.getElementById('container'));
 
 },{"../infinite-scroll":2,"react":137}],2:[function(require,module,exports){
 'use strict';
@@ -63,7 +63,6 @@ var topOfElement = function(element) {
 };
 
 module.exports = {
-
   getDefaultProps: function() {
     return {
       initialPage: 1,

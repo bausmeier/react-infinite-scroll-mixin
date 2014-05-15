@@ -49,4 +49,4 @@ var ItemList = React.createClass({
   }
 });
 
-React.renderComponent(<ItemList offset={100} />, document.getElementById('container'));
+React.renderComponent(<ItemList offset={100} initialPage={0} />, document.getElementById('container'));
