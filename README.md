@@ -5,6 +5,16 @@ The fetchNextPage function should accept the number of the next page to fetch as
 
 Take a look at `examples/example.js` to see a quick demo.
 
+#### Usage
+
+Install:
+
+`npm install react-infinite-scroll-mixin`
+
+Use:
+
+`var InfiniteScrollMixin = require('react-infinite-scroll-mixin');`
+
 #### Properties
 
 The mixin makes use of the `initialPage` and `offset` properties of your component.
