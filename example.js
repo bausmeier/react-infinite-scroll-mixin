@@ -4,7 +4,7 @@
 'use strict';
 
 var React = require('react');
-var InfiniteScroll = require('../infinite-scroll');
+var InfiniteScroll = require('./infinite-scroll');
 
 var itemData = [
   {description: 'One'},
