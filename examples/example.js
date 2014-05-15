@@ -42,7 +42,7 @@ var ItemList = React.createClass({
   fetchNextPage: function(nextPage) {
     console.log('Fetching page: ' + nextPage);
     // You could make an async call to fetch data here
-    // Scrolling is disabled until the component is updated to prevent multiple calls to this function
+    // Listening for scroll events is disabled until the component is updated to prevent multiple calls to this function
     this.setState({
       items: this.state.items.concat(itemData)
     });
