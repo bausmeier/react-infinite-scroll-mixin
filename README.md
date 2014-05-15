@@ -3,7 +3,7 @@
 Add the mixin to the array of mixins for your component and specify a fetchNextPage function to be called when the end of the page is reached.
 The fetchNextPage function should accept the number of the next page to fetch as an argument.
 
-Take a look at `examples/example.js` to see a quick demo.
+Take a look at `examples/example.js` to see a [quick demo](https://bausmeier.github.io/react-infinite-scroll-mixin).
 
 #### Usage
 
