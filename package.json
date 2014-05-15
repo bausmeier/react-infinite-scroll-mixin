@@ -1,0 +1,14 @@
+{
+  "name": "react-infinite-scroll-mixin",
+  "description": "An infinite scroll mixin for React",
+  "author": "Brett Ausmeier <brett@ausmeier.co.za>",
+  "version": "0.1.0",
+  "main": "./infinite-scroll.js",
+  "keywords": [
+    "react",
+    "infinite",
+    "scroll",
+    "mixin"
+  ],
+  "license": "MIT"
+}
