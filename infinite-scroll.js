@@ -7,7 +7,12 @@ var topOfElement = function(element) {
   return element.offsetTop + topOfElement(element.offsetParent);
 };
 
-module.exports = {
+/**
+ * @extends ReactCompositeComponentInterface
+ *
+ * @mixin InfiniteScrollMixin
+ */
+var InfiniteScrollMixin = {
   getDefaultProps: function() {
     return {
       initialPage: 1,
@@ -17,6 +22,10 @@ module.exports = {
 
   componentWillMount: function() {
     this.nextPage = this.props.initialPage;
+  },
+
+  componentWillUnmount: function() {
+    this.detachScrollListener();
   },
 
   componentDidMount: function() {
@@ -47,3 +56,5 @@ module.exports = {
     window.removeEventListener('resize', this.scrollListener);
   }
 };
+
+module.exports = InfiniteScrollMixin;
