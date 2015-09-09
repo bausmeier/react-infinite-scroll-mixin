@@ -1,5 +1,8 @@
 'use strict';
 
+var defaultInitialPage = 1;
+var defaultOffset = 250;
+
 var topOfElement = function(element) {
   if (!element) {
     return 0;
@@ -13,15 +16,8 @@ var topOfElement = function(element) {
  * @mixin InfiniteScrollMixin
  */
 var InfiniteScrollMixin = {
-  getDefaultProps: function() {
-    return {
-      initialPage: 1,
-      offset: 250
-    };
-  },
-
   componentWillMount: function() {
-    this.nextPage = this.props.initialPage;
+    this.nextPage = this.props.initialPage || defaultInitialPage;
   },
 
   componentWillUnmount: function() {
@@ -38,8 +34,9 @@ var InfiniteScrollMixin = {
 
   scrollListener: function () {
     var el = this.getDOMNode();
+    var offset = this.props.offset || defaultOffset;
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    if (topOfElement(el) + el.offsetHeight - scrollTop - window.innerHeight < this.props.offset) {
+    if (topOfElement(el) + el.offsetHeight - scrollTop - window.innerHeight < offset) {
       this.detachScrollListener();
       this.fetchNextPage(this.nextPage++);
     }
