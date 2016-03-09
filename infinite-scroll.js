@@ -1,5 +1,6 @@
 'use strict';
 
+var ReactDOM = require('react-dom');
 var defaultInitialPage = 1;
 var defaultOffset = 250;
 
@@ -33,7 +34,7 @@ var InfiniteScrollMixin = {
   },
 
   scrollListener: function () {
-    var el = this.getDOMNode();
+    var el = ReactDOM.findDOMNode(this);
     var offset = this.props.offset || defaultOffset;
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     if (topOfElement(el) + el.offsetHeight - scrollTop - window.innerHeight < offset) {
