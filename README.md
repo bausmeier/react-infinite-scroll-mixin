@@ -11,6 +11,10 @@ Install:
 
 `npm install react-infinite-scroll-mixin`
 
+Note:
+
+Version 0.3.0 is made to work with React 0.14+ and you will need to install `react` and `react-dom` alongside this package.
+
 Use:
 
 `var InfiniteScrollMixin = require('react-infinite-scroll-mixin');`
