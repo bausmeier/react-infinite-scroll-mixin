@@ -2,11 +2,15 @@
   "name": "react-infinite-scroll-mixin",
   "description": "An infinite scroll mixin for React",
   "author": "Brett Ausmeier <brett@ausmeier.co.za>",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "./infinite-scroll.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/bausmeier/react-infinite-scroll-mixin.git"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
   },
   "keywords": [
     "react",
