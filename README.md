@@ -1,3 +1,5 @@
+## Before using this you should read https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html
+
 ### Infinite scroll mixin for React
 
 Add the mixin to the array of mixins for your component and specify a fetchNextPage function to be called when the end of the page is reached.
